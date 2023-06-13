@@ -273,7 +273,7 @@ def sairzinho():
 
 # sorteia a palavra que será usada
 def sorteia_palavra():
-    with open("palavras.txt", encoding="utf-8 ") as arquivo: # Lê o arquivo na forma de "utf-8"
+    with open(caminho_arquivo("palavras.txt"), encoding="utf-8 ") as arquivo: # Lê o arquivo na forma de "utf-8"
         palavras = arquivo.readlines() # Lê cada linha do arquivo e guarda elas em uma lista
         palavras = list(map(str.strip, palavras)) # Remove possiveis espaços em brancono inicio e no final da lista
         palavraSorteada = random.choice(palavras).upper() # padroniza a palavra sorteada para que todas as letras sejam minusculas
